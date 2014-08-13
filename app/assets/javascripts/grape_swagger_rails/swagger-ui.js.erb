@@ -1694,6 +1694,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 
     OperationView.prototype.wrapFromFileUpload = function(data) {
       var headers            = {}
+        , _this              = this
         , rawResponseHeaders = data.getAllResponseHeaders().split("\n");
 
       rawResponseHeaders.forEach(function(string, index) {
